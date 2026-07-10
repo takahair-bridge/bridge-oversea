@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Your Visit to Japan | bridge personal hair stylist</title>
+<title>For Your Visit to Japan | bridge hair salon</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+JP:wght@200;300;400&family=Zen+Old+Mincho:wght@400;500&display=swap" rel="stylesheet">
@@ -41,9 +41,15 @@ body{
   from{ opacity:0; }
   to{   opacity:1; }
 }
+@keyframes heroBreathe{
+  0%  { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100%{ background-position: 0% 50%; }
+}
 .hero-eyebrow{ animation:fadeIn .8s ease both; animation-delay:.1s; }
 .hero-title{   animation:fadeUp .9s ease both; animation-delay:.25s; }
 .hero-rule{    animation:fadeIn .8s ease both; animation-delay:.55s; }
+.hero-story{   animation:fadeUp .9s ease both; animation-delay:.7s; }
 
 .reveal{
   opacity:0; transform:translateY(24px);
@@ -55,7 +61,11 @@ body{
 .hero{
   position:relative;
   width:100%;
-  background:linear-gradient(135deg,#9a7060 0%,#7d5540 35%,#6b4f3a 65%,#5a3d2a 100%);
+  min-height:42vh;
+  display:flex; align-items:center;
+  background:linear-gradient(135deg,#a07868,#7d5540,#6b4f3a,#8a6248,#5a3d2a);
+  background-size:300% 300%;
+  animation:heroBreathe 12s ease infinite;
   padding:clamp(4.5rem,12vw,7rem) clamp(1.4rem,6vw,3.5rem) clamp(3.5rem,10vw,6rem);
   overflow:hidden;
 }
@@ -82,7 +92,12 @@ body{
 }
 .hero-rule{
   width:48px; height:1px; background:rgba(255,255,255,.4);
-  margin-bottom:0;
+  margin-bottom:1.4rem;
+}
+.hero-story{
+  font-size:clamp(.76rem,2vw,.88rem); font-style:italic;
+  color:rgba(255,255,255,.52); letter-spacing:.06em; line-height:1.9;
+  max-width:400px;
 }
 
 /* ── RESERVATION BAND ── */
@@ -337,6 +352,7 @@ body{
     <span class="hero-eyebrow">Discover your sanctuary</span>
     <h1 class="hero-title">For Your Visit<br>to Japan</h1>
     <div class="hero-rule"></div>
+    <p class="hero-story">TAKA trained in Tokyo, worked in New York, and returned to Osaka<br>with one belief: that every person deserves a stylist who truly listens.</p>
   </div>
 </section>
 
@@ -534,7 +550,7 @@ body{
       Back to Menu
     </a>
   </div>
-  <p class="ft-note">bridge personal hair stylist — Kitahama, Osaka</p>
+  <p class="ft-note">bridge hair salon — Kitahama, Osaka</p>
 </footer>
 
 <script>
@@ -641,7 +657,7 @@ window._br=function(nav,ft){
   var nf=document.createElement('footer');nf.className='brft';
   nf.innerHTML='<div class="brft-logo">bridge</div><div class="brft-tag">Your hair. Your story. Your bridge.</div>'+
     '<ul class="brft-nav">'+ft.map(function(p){return'<li><a href="'+p[0]+'"'+(p[2]?' class="on"':'')+'>'+p[1]+'</a></li>';}).join('')+'</ul>'+
-    '<div class="brft-copy">© bridge personal hair salon — Osaka · Kitahama</div>';
+    '<div class="brft-copy">© bridge hair salon</div>';
   var ef=document.querySelector('footer');
   if(ef){ef.parentNode.replaceChild(nf,ef);}else{document.body.appendChild(nf);}
   document.querySelectorAll('.floating-icons,.floats,[class*="float"]').forEach(function(el){if(!el.classList.contains('brfl')&&!el.classList.contains('brfls'))el.style.display='none';});
