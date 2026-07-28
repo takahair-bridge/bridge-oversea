@@ -342,6 +342,38 @@ body{
   .and-more-inner{ flex-direction:column; align-items:flex-start; }
   .photo-ph{ min-height:130px; }
 }
+
+/* ---- Before you book ---- */
+.guide{ padding:0 22px; margin:0 0 46px; }
+.guide-inner{
+  max-width:720px; margin:0 auto; text-align:center;
+  background:var(--white); border:1px solid var(--rule);
+  padding:44px 30px 38px;
+}
+.guide-eyebrow{
+  font-size:11px; letter-spacing:.28em; text-transform:uppercase;
+  color:var(--gold); margin:0 0 18px;
+}
+.guide-title{
+  font-family:'Cormorant Garamond',serif; font-weight:300;
+  font-size:30px; line-height:1.32; color:var(--ink); margin:0 0 18px;
+}
+.guide-text{ font-size:15px; line-height:1.85; color:var(--ink2); margin:0 0 26px; }
+.guide-btn{
+  display:inline-block; text-decoration:none;
+  background:var(--ink); color:var(--white);
+  padding:15px 38px; font-size:12px; letter-spacing:.2em; text-transform:uppercase;
+  transition:background .3s ease;
+}
+.guide-btn:hover{ background:var(--brown); }
+.guide-note{
+  font-size:11px; letter-spacing:.14em; color:var(--brown);
+  text-transform:uppercase; margin:16px 0 0;
+}
+@media(max-width:600px){
+  .guide-inner{ padding:34px 20px 30px; }
+  .guide-title{ font-size:24px; }
+}
 </style>
 </head>
 <body>
@@ -391,6 +423,24 @@ body{
   </p>
   <div class="intro-rule"></div>
 </section>
+
+<!-- BEFORE YOU BOOK -->
+<div class="sec-head reveal">
+  <div class="sec-label">Before you book</div>
+</div>
+
+<div class="guide reveal">
+  <div class="guide-inner">
+    <p class="guide-eyebrow">Hair, in Japan</p>
+    <h2 class="guide-title">The hard part isn&rsquo;t the haircut.<br>It&rsquo;s booking it.</h2>
+    <p class="guide-text">
+      A few questions about your hair and what you&rsquo;d like.<br>
+      At the end, a message is written for you &mdash; send it to us, or to any salon in Japan.
+    </p>
+    <a class="guide-btn" href="https://takahair-bridge.github.io/hair-in-japan/" target="_blank" rel="noopener">Start the questions</a>
+    <p class="guide-note">Free &middot; about 3 minutes &middot; nothing is saved</p>
+  </div>
+</div>
 
 <!-- COUPON MENU -->
 <div class="sec-head reveal">
