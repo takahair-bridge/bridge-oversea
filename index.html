@@ -731,5 +731,77 @@ window._br=function(nav,ft){
   [['https://hub.personalhairstylist.info','Information',false],['https://takahair-bridge.github.io/bridge-menu/','Menu',false],['https://takahair-bridge.github.io/bridge-Products/','Products',false],['https://takahair-bridge.github.io/bridge-review/','Review',false],['https://takahair-bridge.github.io/bridge-place/','Place',false],['https://takahair-bridge.github.io/bridge-profile/','Profile',false],['https://takahair-bridge.github.io/bridge-diagnosis/index.html','Diagnosis',false],['https://takahair-bridge.github.io/bridge-FAQ/','FAQ',false]],
   [['https://hub.personalhairstylist.info','Information',false],['https://takahair-bridge.github.io/bridge-menu/','Menu',false],['https://takahair-bridge.github.io/bridge-Products/','Products',false],['https://takahair-bridge.github.io/bridge-review/','Review',false],['https://takahair-bridge.github.io/bridge-place/','Place',false],['https://takahair-bridge.github.io/bridge-profile/','Profile',false],['https://takahair-bridge.github.io/bridge-diagnosis/index.html','Diagnosis',false],['https://takahair-bridge.github.io/bridge-FAQ/','FAQ',false]]
 );</script>
+<!-- bridge 導線計測 v2.0 / gas_32_track.gs へ送る。Cookieなし・個人情報なし・失敗しても画面は止まらない -->
+<script>
+(function(){
+  var EXEC = 'https://script.google.com/macros/s/AKfycbxBv2a450pD_4AqkjQgt2dwyST-xzV5Anq69es8MFdb_ZRB94M74NuemP36KD0QKX95/exec';
+  var PAGE = 'oversea';
+  var OK   = ['instagram','tiktok','google','hub','oversea','line','recloud','sign','direct','other'];
+
+  function src(){
+    try{
+      var q = new URLSearchParams(location.search);
+      var s = (q.get('src') || q.get('utm_source') || '').toLowerCase();
+      if(!s){ try{ s = sessionStorage.getItem('bridge_src') || ''; }catch(e){} }
+      if(!s){
+        var r = (document.referrer || '').toLowerCase();
+        if(!r) s = 'direct';
+        else if(r.indexOf('instagram') > -1) s = 'instagram';
+        else if(r.indexOf('tiktok') > -1) s = 'tiktok';
+        else if(r.indexOf('google') > -1) s = 'google';
+        else if(r.indexOf('hub.personalhairstylist') > -1) s = 'hub';
+        else if(r.indexOf('bridge-oversea') > -1) s = 'oversea';
+        else if(r.indexOf('line') > -1) s = 'line';
+        else s = 'other';
+      }
+      if(OK.indexOf(s) < 0) s = 'other';
+      try{ sessionStorage.setItem('bridge_src', s); }catch(e){}
+      return s;
+    }catch(e){ return 'other'; }
+  }
+
+  function dev(){ return /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? 'mobile' : 'desktop'; }
+
+  function send(t, a){
+    try{
+      var u = EXEC + '?k=brg&t=' + t + '&p=' + PAGE + '&r=' + src()
+            + '&l=' + encodeURIComponent(String(navigator.language || '').slice(0,12))
+            + '&d=' + dev();
+      if(a) u += '&a=' + a;
+      new Image().src = u;
+    }catch(e){}
+  }
+
+  try{
+    var vk = 'bridge_v_' + PAGE;
+    if(!sessionStorage.getItem(vk)){ sessionStorage.setItem(vk, '1'); send('view'); }
+  }catch(e){ send('view'); }
+
+  function dest(h){
+    h = String(h || '').toLowerCase();
+    if(!h) return '';
+    if(h.indexOf('hair-in-japan') > -1 || h.indexOf('bridge-diagnosis') > -1) return 'diagnosis';
+    if(h.indexOf('bridge-menu') > -1) return 'menu';
+    if(h.indexOf('lin.ee') > -1 || h.indexOf('line.me') > -1) return 'line';
+    if(h.indexOf('g.page') > -1 || h.indexOf('google.com/maps') > -1 || h.indexOf('maps.app') > -1) return 'google';
+    if(h.indexOf('instagram.com') > -1) return 'instagram';
+    if(h.indexOf('bridge-products') > -1) return 'products';
+    if(h.indexOf('bridge-place') > -1) return 'place';
+    if(h.indexOf('step2') > -1 || h.indexOf('step3') > -1) return 'next';
+    return '';
+  }
+
+  document.addEventListener('click', function(ev){
+    try{
+      var t = ev.target;
+      var a = (t && t.closest) ? t.closest('a[href]') : null;
+      if(!a) return;
+      var d = a.getAttribute('data-track') || dest(a.getAttribute('href'));
+      if(d) send('tap', d);
+    }catch(e){}
+  }, true);
+})();
+</script>
+
 </body>
 </html>
