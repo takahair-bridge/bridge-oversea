@@ -306,6 +306,9 @@ body{
 .card-book svg{ width:11px; height:11px; fill:currentColor; flex-shrink:0; }
 
 /* ── OPTION ── */
+.voices .card{ padding:1.3rem 1.6rem 1.1rem; }
+.voice-text{ font-family:inherit; font-style:italic; font-size:clamp(.92rem,3.4vw,1.04rem); line-height:1.75; color:var(--ink2); margin:0 0 .7rem; }
+.voice-src{ font-size:.62rem; letter-spacing:.14em; color:var(--brown); margin:0; }
 .cards-opt .card{ padding:1.1rem 1.6rem 1rem; background:var(--bg2); }
 .cards-opt .card-name{ font-size:clamp(.86rem,3.4vw,1.02rem); }
 .cards-opt .card-price{ font-size:clamp(.94rem,3.4vw,1.18rem); }
@@ -518,49 +521,16 @@ body{
 
 <div class="cards">
 
-  <!-- MOST POPULAR -->
-  <div class="card card-featured reveal">
-    <span class="card-badge">Most popular</span>
-    <h2 class="card-name">Head massage <span class="gloss">(a short head spa)</span> + Ultra fine bubble care + Blow dry + Deep Treatment</h2>
+  <!-- Whole head color -->
+  <div class="card reveal">
+    <h2 class="card-name">Hair cut + Whole head color (one make) + Ultra fine bubble care</h2>
     <div class="card-price-row">
-      <span class="card-price" data-jpy="16500">¥16,500</span>
+      <span class="card-price" data-jpy="19800">¥19,800</span>
       <span class="card-price-unit">yen</span>
       <span class="card-cx" id="cx-0"></span>
     </div>
     <div class="card-rule"></div>
-    <p class="card-desc">From scalp to ends — a treatment that resets everything. Ultra-fine bubbles lift away buildup, the massage releases tension, and the deep conditioning restores what daily life takes away. You'll leave feeling the difference.</p>
-    <a href="https://www.instagram.com/takahair_bridge/?utm_source=qr" target="_blank" class="card-book">
-      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-      Book via Instagram
-    </a>
-  </div>
-
-  <!-- Shampoo -->
-  <div class="card reveal">
-    <h2 class="card-name">Shampoo + Blow dry + Ultra fine bubble care</h2>
-    <div class="card-price-row">
-      <span class="card-price" data-jpy="7700">¥7,700</span>
-      <span class="card-price-unit">yen</span>
-      <span class="card-cx" id="cx-1"></span>
-    </div>
-    <div class="card-rule"></div>
-    <p class="card-desc">We use a unique Japanese technique that utilises ultra-fine carbonated bubbles to gently lift away buildup from the scalp and remove unnecessary residue from the hair. This helps keep your scalp clean and your hair in a healthy condition.</p>
-    <a href="https://www.instagram.com/takahair_bridge/?utm_source=qr" target="_blank" class="card-book">
-      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-      Book via Instagram
-    </a>
-  </div>
-
-  <!-- Hair cut -->
-  <div class="card reveal">
-    <h2 class="card-name">Hair cut + Ultra fine bubble care</h2>
-    <div class="card-price-row">
-      <span class="card-price" data-jpy="9900">¥9,900</span>
-      <span class="card-price-unit">yen</span>
-      <span class="card-cx" id="cx-2"></span>
-    </div>
-    <div class="card-rule"></div>
-    <p class="card-desc">Haircuts are crafted using precision-focused Japanese methods, paired with insights gained from international experience, to create a design that truly fits your individual style and lifestyle.</p>
+    <p class="card-desc">If you're looking to color your entire hair, a full color application is available. Bleach, highlights, and balayage services are offered separately — feel free to reach out for a consultation.</p>
     <a href="https://www.instagram.com/takahair_bridge/?utm_source=qr" target="_blank" class="card-book">
       <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
       Book via Instagram
@@ -573,7 +543,7 @@ body{
     <div class="card-price-row">
       <span class="card-price" data-jpy="17600">¥17,600</span>
       <span class="card-price-unit">yen</span>
-      <span class="card-cx" id="cx-3"></span>
+      <span class="card-cx" id="cx-1"></span>
     </div>
     <div class="card-rule"></div>
     <p class="card-desc">For color services, root touch-ups are available for new growth within 5 cm from the scalp. Please note that bleach is not included in this option.</p>
@@ -583,16 +553,66 @@ body{
     </a>
   </div>
 
-  <!-- Whole head color -->
+  <!-- Head massage set -->
   <div class="card reveal">
-    <h2 class="card-name">Hair cut + Whole head color (one make) + Ultra fine bubble care</h2>
+    <h2 class="card-name">Head massage <span class="gloss">(a short head spa)</span> + Ultra fine bubble care + Blow dry + Deep Treatment</h2>
     <div class="card-price-row">
-      <span class="card-price" data-jpy="19800">¥19,800</span>
+      <span class="card-price" data-jpy="16500">¥16,500</span>
+      <span class="card-price-unit">yen</span>
+      <span class="card-cx" id="cx-2"></span>
+    </div>
+    <div class="card-rule"></div>
+    <p class="card-desc">From scalp to ends — a treatment that resets everything. Ultra-fine bubbles lift away buildup, the massage releases tension, and the deep conditioning restores what daily life takes away. You'll leave feeling the difference.</p>
+    <a href="https://www.instagram.com/takahair_bridge/?utm_source=qr" target="_blank" class="card-book">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      Book via Instagram
+    </a>
+  </div>
+
+  <!-- SIGNATURE -->
+  <div class="card card-featured reveal">
+    <span class="card-badge">Signature</span>
+    <h2 class="card-name">Hair cut + Head massage <span class="gloss">(15 min)</span> + Ultra fine bubble care</h2>
+    <div class="card-price-row">
+      <span class="card-price" data-jpy="13200">¥13,200</span>
+      <span class="card-price-unit">yen</span>
+      <span class="card-cx" id="cx-3"></span>
+    </div>
+    <div class="card-rule"></div>
+    <p class="card-desc">For when you&rsquo;d like a little more than a haircut. A precision cut, a short head massage to release the tension of travel, and ultra-fine bubbles that leave your scalp clean and light.</p>
+    <a href="https://www.instagram.com/takahair_bridge/?utm_source=qr" target="_blank" class="card-book">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      Book via Instagram
+    </a>
+  </div>
+
+  <!-- Hair cut -->
+  <div class="card reveal">
+    <span class="card-badge">Most chosen</span>
+    <h2 class="card-name">Hair cut + Ultra fine bubble care</h2>
+    <div class="card-price-row">
+      <span class="card-price" data-jpy="9900">¥9,900</span>
       <span class="card-price-unit">yen</span>
       <span class="card-cx" id="cx-4"></span>
     </div>
     <div class="card-rule"></div>
-    <p class="card-desc">If you're looking to color your entire hair, a full color application is available. Bleach, highlights, and balayage services are offered separately — feel free to reach out for a consultation.</p>
+    <p class="card-desc">Haircuts are crafted using precision-focused Japanese methods, paired with insights gained from international experience, to create a design that truly fits your individual style and lifestyle.</p>
+    <a href="https://www.instagram.com/takahair_bridge/?utm_source=qr" target="_blank" class="card-book">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      Book via Instagram
+    </a>
+  </div>
+
+  <!-- Shampoo -->
+  <div class="card reveal">
+    <h2 class="card-name">Shampoo + Blow dry + Ultra fine bubble care</h2>
+    <div class="card-price-row">
+      <span class="card-price" data-jpy="7700">¥7,700</span>
+      <span class="card-price-unit">yen</span>
+      <span class="card-cx" id="cx-5"></span>
+    </div>
+    <div class="card-rule"></div>
+    <p class="card-desc">We use a unique Japanese technique that utilises ultra-fine carbonated bubbles to gently lift away buildup from the scalp and remove unnecessary residue from the hair. This helps keep your scalp clean and your hair in a healthy condition.</p>
     <a href="https://www.instagram.com/takahair_bridge/?utm_source=qr" target="_blank" class="card-book">
       <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
       Book via Instagram
@@ -614,7 +634,7 @@ body{
     <div class="card-price-row">
       <span class="card-price" data-jpy="7700">+¥7,700</span>
       <span class="card-price-unit">yen</span>
-      <span class="card-cx" id="cx-5"></span>
+      <span class="card-cx" id="cx-6"></span>
     </div>
     <div class="card-rule"></div>
     <p class="card-desc">A Japanese deep conditioning treatment that works from within — restoring moisture, softness, and the kind of finish you'll want to touch again and again.</p>
@@ -636,6 +656,26 @@ body{
     <a href="https://www.instagram.com/takahair_bridge/?utm_source=qr" class="ig-btn" target="_blank" aria-label="Instagram">
       <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
     </a>
+  </div>
+</div>
+
+
+<!-- GUEST VOICES (Google reviews, original text, initials only) -->
+<div class="sec-head reveal">
+  <div class="sec-label">Guest voices</div>
+</div>
+<div class="cards voices">
+  <div class="card reveal">
+    <p class="voice-text">&ldquo;The best haircut of my life! &hellip; He never rushed me and checked in until I was confident in my decision.&rdquo;</p>
+    <p class="voice-src">V.T. &middot; Google review</p>
+  </div>
+  <div class="card reveal">
+    <p class="voice-text">&ldquo;Taka was friendly, funny, attentive, and really took the time to understand what I wanted.&rdquo;</p>
+    <p class="voice-src">V.K. &middot; Google review</p>
+  </div>
+  <div class="card reveal">
+    <p class="voice-text">&ldquo;Taka San will always think about how the hairstyle will grow out over time and cuts and dyes hair in a way that makes daily care after the salon very easy.&rdquo;</p>
+    <p class="voice-src">J.M. &middot; Google review</p>
   </div>
 </div>
 
